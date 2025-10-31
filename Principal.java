@@ -52,6 +52,7 @@ public class  Principal {
                 default:
                     System.out.println("Opción inválida. Intente de nuevo.");
             }
+            @SuppressWarnings("unused")
             String cadena= "\n--------MENU-------------\n1. Listar equipos con sus características\n2. Buscar un equipo por ID o nombre y mostrar su información\n3. Ordenar catálogo por consumo eléctrico\n4.Salir";
             opcion = sc.nextInt();
             sc.nextLine();

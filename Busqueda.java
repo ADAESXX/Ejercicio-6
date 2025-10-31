@@ -19,12 +19,9 @@ public class Busqueda {
                 }
             }
         }
-        System.out.println("Equipo no encontrado.");
     }
 
-    private static void mostrarInfo(Sistemas s){
-        String cadena="""
-                      
-                      ---------- Informaci\u00f3n del Sistema -------ID: """ + s.getID() +"Nombre: " + s.getNombre() +"Fabricante: " + s.getFabricante() + "Características: " + s.getCaracteristicas() + "Registro: " + s.registro()+"Acción: " + s.accion();
+    private static String mostrarInfo(Sistemas s){
+        return "---------- Informacionn dl Sistema -------ID: " + s.getID() +"Nombre: " + s.getNombre() +"Fabricante: " + s.getFabricante() + "Características: " + s.getCaracteristicas() + "Registro: " + s.registro()+"Acción: " + s.accion();
     }
 }
