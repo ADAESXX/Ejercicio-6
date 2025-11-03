@@ -58,4 +58,8 @@ public class DronRiego implements Sistemas {
         int consumoPorHora = 150; // kWh estimados
         return cantidad * consumoPorHora;
     }
+    @Override
+    public String toString() {
+        return "ID: " + identificacion +" | Nombre: " + getNombre() +" | Fabricante: " + fabricante +" | Consumo: " + medicion(1) + " kWh";
+    }
 }

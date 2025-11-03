@@ -57,6 +57,9 @@ public class Sensores implements Sistemas{
         int consumoElectricoXHora= 100;
         return cantidad*consumoElectricoXHora;
     }
-
+    @Override
+    public String toString() {
+        return "ID: " + identificacion +" | Nombre: " + getNombre() +" | Fabricante: " + fabricante +" | Consumo: " + medicion(1) + " kWh";
+    }
     
 }

@@ -1,27 +1,34 @@
-//Autor: Allyson Dulce Abigail Escobar Sandoval
+// Autor: Allyson Dulce Abigail Escobar Sandoval
 import java.util.ArrayList;
 
 public class Busqueda {
-    public static void buscar(ArrayList<Sistemas> catalogo, String dato){
+
+    public static String buscar(ArrayList<Sistemas> catalogo, String dato) {
         try {
             int id = Integer.parseInt(dato);
-            for(Sistemas s : catalogo){
-                if(s.getID() == id){
-                    mostrarInfo(s);
-                    return;
+            for (Sistemas s : catalogo) {
+                if (s.getID() == id) {
+                    return mostrarInfo(s);
                 }
             }
-        } catch(NumberFormatException e){
-            for(Sistemas s : catalogo){
-                if(s.getNombre().equalsIgnoreCase(dato)){
-                    mostrarInfo(s);
-                    return;
+        } catch (NumberFormatException e) {
+            for (Sistemas s : catalogo) {
+                if (s.getNombre().equalsIgnoreCase(dato)) {
+                    return mostrarInfo(s);
                 }
             }
         }
+        return "No se encontró ningún equipo con el dato ingresado.";
     }
 
-    private static String mostrarInfo(Sistemas s){
-        return "---------- Informacionn dl Sistema -------ID: " + s.getID() +"Nombre: " + s.getNombre() +"Fabricante: " + s.getFabricante() + "Características: " + s.getCaracteristicas() + "Registro: " + s.registro()+"Acción: " + s.accion();
+    private static String mostrarInfo(Sistemas s) {
+        return """
+               ------ Informacion del Sistema ------
+               ID: """ + s.getID() +
+                "\nNombre: " + s.getNombre() +
+                "\nFabricante: " + s.getFabricante() +
+                "\nCaracterísticas: " + s.getCaracteristicas() +
+                "\nRegistro: " + s.registro() +
+                "\nAcción: " + s.accion() + "\n";
     }
 }

@@ -28,5 +28,6 @@ public interface Sistemas{
     public String registro();
     //permite ver el consumo eléctrico
     public int medicion(int cantidad);
+    public String toString();
 
 }
